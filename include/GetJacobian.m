@@ -3,8 +3,7 @@
 % configuration is described by bTei.
 %
 % Inputs:
-% - bTei: vector of matrices containing the transformation matrices from
-% joint i-1 to joint i for the current configuration.
+% - biTei : transformation matrix of link <i> w.r.t. link <i-1> for the input qi.
 % - bTe: current transformation matrix from base to the end effector.
 % - jointType: vector identifying the joint type, 0 for revolute, 1 for
 % prismatic
@@ -12,7 +11,7 @@
 % Output:
 % - J: end-effector jacobian matrix
 
-function J = GetJacobian(bTei, bTe, jointType)
+function J = GetJacobian(biTei, bTe, jointType)
 
 %% TODO
 
